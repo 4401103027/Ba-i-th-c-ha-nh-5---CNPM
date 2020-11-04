@@ -1,0 +1,10 @@
+C:\Users\Admin\Downloads\BTH5\BTH5\bin\Debug\BTH5.exe.config
+C:\Users\Admin\Downloads\BTH5\BTH5\bin\Debug\BTH5.exe
+C:\Users\Admin\Downloads\BTH5\BTH5\bin\Debug\BTH5.pdb
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.Form1.resources
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.Properties.Resources.resources
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.exe
+C:\Users\Admin\Downloads\BTH5\BTH5\obj\Debug\BTH5.pdb
