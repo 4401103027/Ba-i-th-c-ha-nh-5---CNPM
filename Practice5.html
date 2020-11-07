@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+<title>Bài thực hành 5</title>
+<style>
+	h1 {
+		font-size: x-large;
+		font-family: Arial;
+		color: #B404AE;
+		
+	}
+	table{
+	background-color: #F6CEF5;
+	}
+</style>
+</head>
+<body>
+	<div>
+	<div class = "container">
+		<form id = "Tien-dien">
+			<table align = "center" cellspacing="0" cellpadding="5">
+				<thead>
+				<tr style = "background-color: #F8E0F7">
+					<th colspan = "2"><h1>Tính tiền điện sinh hoạt bậc thang</h1></th>
+				</tr>
+				</thead>
+				
+				<tbody>
+				<tr>
+					<td>Chỉ số cũ:</td>
+					<td><input type = "number" id = "old-index" placeholder = "Nhập chỉ số cũ"</td>
+				</tr>
+
+				<tr>
+					<td>Chỉ số mới:</td>
+					<td><input type = "number" id = "new-index" placeholder = "Nhập chỉ số mới"</td>
+				</tr>
+
+				<tr>
+					<td>Điện năng tiêu thụ:</td>
+					<td><input id = "electric-use" placeholder = "Điện năng đã tiêu thụ" disabled = "disabled"</td>
+				</tr>
+				
+				<tr>
+					<td>Thành tiền:</td>
+					<td><input id = "pay" placeholder = "Số tiền phải trả" disabled = "disabled"</td>
+				</tr>
+
+				<tr>
+					<td>Tổng tiền đã có VAT:</td>
+					<td><input id = "VAT" placeholder = "Tổng tiền (có giá trị gia tăng)" disabled = "disabled"</td>
+				</tr>
+
+				<tr>
+					<td colspan = "2" ><center>
+					<input style = "color: #DA81F5; background-color: #ECE0F8" type = "button" onClick = "Pay()" value = "Tính tiền điện">
+					</center>
+					</td>
+				</tr>
+				</tbody>	
+			</table>
+		</form>
+	</div>
+	</div>
+	<script type = "text/javascript">
+		function Pay() {
+			var newindex = document.getElementById('new-index');
+			var oldindex = document.getElementById('old-index');
+			var electricuse = Number(newindex.value) - Number(oldindex.value);
+			//alert("Số tiền phải trả");
+			//alert(electricuse);
+			document.getElementById('electric-use').value = electricuse;
+			var kq, vat;
+			if(electricuse >= 0 && electricuse < 100) 
+				kq = electricuse * 1418;
+			else if(electricuse > 100 && electricuse <= 150) 
+				kq = (100 * 1418 + (electricuse - 100) * 1622);
+			else if(electricuse > 150 && electricuse <= 200) 
+				kq = (100 * 1418 + 50 * 1622 + (electricuse - 150) * 2044);
+			else if(electricuse > 200 && electricuse <= 300) 
+				kq = (100 * 1418 + 50 * 1622 + 50 * 2044 + (electricuse - 200) * 2210);
+			else if(electricuse > 300 && electricuse <= 400) 
+				kq = (100 * 1418 + 50 * 1622 + 50 * 2044 + 100 * 2210 + (electricuse - 300) * 2361);
+			else kq = (100 * 1418 + 50 * 1622 + 50 * 2044 +100 *2210 + 100 * 2361 + (electricuse - 400) * 2420)
+			document.getElementById('pay').value = kq;
+			document.getElementById('VAT').value = Math.round(kq * 1.1);
+		}
+	</script>
+</body>
+</html>
